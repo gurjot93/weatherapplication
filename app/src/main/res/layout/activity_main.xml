@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by - Gurjot Singh-->
+<!-- Created Date - 01/11/2018-->
+<!-- XML File contains the complete design of the Weather Application -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+
+    >
+    <!-- TextView to display the data to enter a city -->
+    <TextView
+        android:id="@+id/t_city_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="serif"
+        android:text="Enter City Name:"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <!-- EditText for entering the city name -->
+    <EditText
+        android:id="@+id/e_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/t_city_display"
+        android:textColor="@android:color/white"
+
+        android:layout_marginTop="0dp"
+        android:hint="eg. Halifax"
+        android:textColorHint="@android:color/white"
+        />
+    <!-- Button that will fetch the weather details for the user -->
+    <Button
+        android:id="@+id/b_getweather"
+        android:layout_width="209dp"
+        android:layout_height="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="81dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="GET WEATHER"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+    <!-- TextView to display the result -->
+    <TextView
+        android:id="@+id/t_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="136dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <!-- TextView to display the result -->
+    <TextView
+        android:id="@+id/t_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="164dp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="70sp"
+        android:textStyle="bold" />
+    <!-- TextView to display the result -->
+    <TextView
+        android:id="@+id/t_minmax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t_temp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+    <!-- TextView to display the result -->
+    <TextView
+        android:id="@+id/t_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t_minmax"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+    <!-- TextView to display the result -->
+    <TextView
+        android:id="@+id/t_description"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t_weather"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="italic" />
+    <!-- TextView to display the result -->
+    <TextView
+        android:id="@+id/t_humidity"
+        android:layout_width="81dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/b_getweather"
+        android:layout_marginBottom="99dp"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <!-- TextView to display the result -->
+    <TextView
+        android:id="@+id/t_humidity_display"
+        android:layout_width="76dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/b_getweather"
+        android:layout_below="@+id/t_humidity"
+        android:layout_marginTop="-99dp"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <!-- TextView to display the result -->
+    <TextView
+        android:id="@+id/t_clouds_display"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/t_clouds"
+        android:layout_below="@+id/t_humidity"
+        android:layout_marginTop="-99dp"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <!-- TextView to display the result -->
+    <TextView
+        android:id="@+id/t_clouds"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/t_humidity"
+        android:layout_marginEnd="97dp"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <!-- ImageView to display the Image Description for Weather -->
+    <ImageView
+        android:id="@+id/i_weather"
+        android:layout_width="113dp"
+        android:layout_height="95dp"
+        android:layout_below="@+id/t_description"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@android:color/background_light" />
+
+</RelativeLayout>
